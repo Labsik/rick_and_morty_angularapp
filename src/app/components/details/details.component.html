@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand navbar-dark bg-success mb-4">
+  <div class="container">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item pr-3">
+        <a
+          class="nav-link"
+          [routerLink]="['/persons']"
+          routerLinkActive="router-link-active"
+        >
+          Персонажи</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [routerLink]="['/']"
+          routerLinkActive="router-link-active"
+        >
+          Начальная страница</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<h2 class="m-2">Детальная характеристика всех персонажей</h2>
+<div class="card-group" *ngFor="let person of persons">
+  <ul class="list-unstyled w-50 ml-2">
+    <li class="card card-body mb-2">
+      <div class="row">
+        <div class="col-sm-4">
+          <h3 class="m-1">{{ person.name }}</h3>
+          <img class="img-fluid mt-2" src="{{ person.image }}" alt="" />
+        </div>
+        <div class="col-sm-8">
+          <ul class="list-group">
+            <li class="list-group-item">Species: {{ person.species }}</li>
+            <li class="list-group-item">Status: {{ person.status }}</li>
+            <li class="list-group-item">Gender: {{ person.gender }}</li>
+            <li class="list-group-item">Origin: {{ person.origin.name }}</li>
+            <li class="list-group-item">
+              Location: {{ person.location.name }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand navbar-dark bg-success mb-4">
+  <div class="container">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item pr-3">
+        <a
+          [routerLink]="['/details']"
+          routerLinkActive="router-link-active"
+          class="nav-link"
+        >
+          Детали</a
+        >
+      </li>
+      <li class="nav-item pr-3">
+        <a
+          [routerLink]="['/']"
+          routerLinkActive="router-link-active"
+          class="nav-link"
+        >
+          Начальная страница</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<h1 class="m-2">Cписок персонажей</h1>
+
+<div class="card person-container m-2 mat-elevation-z8" >
+  <table mat-table [dataSource]="persons" matSort>
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>No.</th>
+      <td mat-cell *matCellDef="let person">{{ person.id }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+      <td mat-cell *matCellDef="let person">
+        <a [routerLink]="['/details']" routerLinkActive="router-link-active">
+          {{ person.name }}
+        </a>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <mat-paginator
+    [pageSizeOptions]="[10, 20]"
+    showFirstLastButtons
+  ></mat-paginator>
+</div>

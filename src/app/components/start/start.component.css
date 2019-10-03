@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+  }
+
+/* main {
+  background-image: url("https://www.nerdsandbeyond.com/wp-content/uploads/2019/05/Image-Header.jpg");
+  background-repeat: no-repeat no-repeat;
+  background-size: 100%;
+  height: 100%;
+  position: relative;
+}
+
+div {
+  position: sticky;
+  top: 0;
+} */
+
+
+h3{
+    text-align: center;
+}
