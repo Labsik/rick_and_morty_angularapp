@@ -18,11 +18,12 @@ export class DetailsComponent implements OnInit {
   }
 
   ngOnInit() {
-    for (let pages = 1; pages <= 25; pages++) {
-      this.dataService.getPersons(pages).subscribe(response => {
+    for (let page = 1; page <= 25; page++) {
+      this.dataService.getPersons(page).subscribe(response => {
         for (let person of response.results) {
           this.persons.push(person);
         }
+        // this.persons = response.results;
       });
     }
   }

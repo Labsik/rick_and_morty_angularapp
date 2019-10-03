@@ -1,3 +1,8 @@
+.person-container {
+  height: 400px;
+  overflow: auto;
+}
+
 table {
   width: 100%;
 }
@@ -5,3 +10,4 @@ table {
 th.mat-sort-header-sorted {
   color: black;
 }
+

@@ -1,6 +1,6 @@
 
 export interface ResponseInterface {
-  info: object;
+  info: any;
   results: any;
 }
 

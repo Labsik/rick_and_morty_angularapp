@@ -2,8 +2,7 @@ import { Injectable } from "@angular/core";
 
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { PersonResponse,  ResponseInterface } from "../models/Person";
-
+import { PersonResponse, ResponseInterface, Person } from "../models/Person";
 
 @Injectable()
 export class DataService {
@@ -14,14 +13,12 @@ export class DataService {
   // getPersons(): Observable<Person[]> {
   //   return this.http.get<Person[]>(this.personsUrl).results;
   // }
- 
 
   getPersons(pageNumber: number = 1): Observable<PersonResponse> {
-    return this.getResponse(this.personsUrl + pageNumber);
+    return this.getResponse(this.personsUrl + `${pageNumber}`);
   }
 
-getResponse(url: string): Observable<ResponseInterface> {
+  getResponse(url: string): Observable<ResponseInterface> {
     return this.http.get<ResponseInterface>(url);
   }
-
 }
