@@ -23,7 +23,6 @@ export class DetailsComponent implements OnInit {
         for (let person of response.results) {
           this.persons.push(person);
         }
-        // this.persons = response.results;
       });
     }
   }

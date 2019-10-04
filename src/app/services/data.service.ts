@@ -14,8 +14,8 @@ export class DataService {
   //   return this.http.get<Person[]>(this.personsUrl).results;
   // }
 
-  getPersons(pageNumber: number = 1): Observable<PersonResponse> {
-    return this.getResponse(this.personsUrl + `${pageNumber}`);
+  getPersons(pageNumber: number): Observable<PersonResponse> {
+    return this.getResponse(this.personsUrl + `${pageNumber + 1}`);
   }
 
   getResponse(url: string): Observable<ResponseInterface> {
