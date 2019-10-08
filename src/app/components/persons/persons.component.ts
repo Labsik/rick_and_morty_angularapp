@@ -7,14 +7,15 @@ import { MatSort } from "@angular/material/sort";
 import { MatTableDataSource } from "@angular/material/table";
 
 import { MatPaginator } from "@angular/material/paginator";
-import { ActivatedRoute } from "@angular/router";
+
 
 import { merge, Observable, of as observableOf } from "rxjs";
 import { map, startWith, switchMap } from "rxjs/operators";
 import { HttpClient } from "@angular/common/http";
 import { Sort } from "@angular/material/sort";
-import { DetailsComponent } from '../details/details.component';
-import { MatDialog, MatDialogConfig } from '@angular/material'
+
+import { MatDialog, MatDialogConfig } from "@angular/material";
+
 
 @Component({
   selector: "app-persons",
@@ -24,14 +25,14 @@ import { MatDialog, MatDialogConfig } from '@angular/material'
 export class PersonsComponent implements AfterViewInit {
   displayedColumns: string[] = ["id", "name"];
   dataService: DataService;
-  data;
+  data: MatTableDataSource<any>;
 
   resultsLength = 0;
 
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
-  constructor(private http: HttpClient, private dialog: MatDialog ) {}
+  constructor(private http: HttpClient) {}
 
   ngAfterViewInit() {
     this.dataService = new DataService(this.http);
@@ -48,10 +49,8 @@ export class PersonsComponent implements AfterViewInit {
           return data.results;
         })
       )
-    
       .subscribe(data => (this.data = new MatTableDataSource(data)));
     // this.data.sort = this.sort;
   }
-
 
 }

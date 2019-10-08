@@ -8,9 +8,9 @@ import { PersonDetailsComponent } from "./components/person-details/person-detai
 
 const routes: Routes = [
   { path: "", component: StartComponent },
-  // { path: "persons", component: PersonsComponent },
+  { path: "persons", component: PersonsComponent },
   { path: "details", component: DetailsComponent },
-  { path: "person/:id", component: PersonDetailsComponent },
+  { path: "persons/:id", component: PersonDetailsComponent },
   { path: "**", component: NotFoundComponent }
 ];
 

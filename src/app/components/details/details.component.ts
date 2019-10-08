@@ -1,8 +1,7 @@
 import { Component, OnInit, HostListener, Input } from "@angular/core";
 import { DataService } from "src/app/services/data.service";
-import { Person } from "src/app/models/Person";
+
 import { ActivatedRoute, Params } from "@angular/router";
-import { Observable } from "rxjs";
 
 @Component({
   selector: "app-details",

@@ -1,4 +1,29 @@
-<div class="card-group" *ngIf="person">
+<nav class="navbar navbar-expand navbar-dark bg-success mb-4">
+  <div class="container">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item pr-3">
+        <a
+          [routerLink]="['/persons']"
+          routerLinkActive="router-link-active"
+          class="nav-link"
+        >
+          Список персонажей
+        </a>
+      </li>
+      <li class="nav-item pr-3">
+        <a
+          [routerLink]="['/']"
+          routerLinkActive="router-link-active"
+          class="nav-link"
+        >
+          Начальная страница</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="card-group container-fluid" *ngIf="person">
   <ul class="list-unstyled w-50 ml-2">
     <li class="card card-body mb-2">
       <div class="row">
@@ -21,5 +46,3 @@
     </li>
   </ul>
 </div>
-
-

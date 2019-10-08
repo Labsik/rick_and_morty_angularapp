@@ -2,12 +2,7 @@ import { Injectable } from "@angular/core";
 
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from "rxjs";
-import {
-  ResponseInterface,
-  Persons,
-  PersonsResponse,
-  Person
-} from "../models/Person";
+import { ResponseInterface, PersonsResponse, Person } from "../models/Person";
 
 @Injectable()
 export class DataService {

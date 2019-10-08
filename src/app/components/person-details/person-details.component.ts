@@ -1,10 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { DataService } from "src/app/services/data.service";
-import { Router, ActivatedRoute, Params } from "@angular/router";
+import { ActivatedRoute} from "@angular/router";
 import { Person } from "src/app/models/Person";
-import { Observable } from "rxjs";
-import { $ } from "protractor";
-import { switchMap } from "rxjs/operators";
 
 @Component({
   selector: "app-person-details",
@@ -18,7 +15,6 @@ export class PersonDetailsComponent implements OnInit {
 
   constructor(
     private dataService: DataService,
-    private router: Router,
     private route: ActivatedRoute
   ) {}
 
@@ -29,6 +25,5 @@ export class PersonDetailsComponent implements OnInit {
   getPerson() {
     const id = +this.route.snapshot.paramMap.get("id");
     this.dataService.getPerson(id).subscribe(person => (this.person = person));
-    console.log(typeof this.person);
   }
 }

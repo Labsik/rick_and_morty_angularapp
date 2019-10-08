@@ -19,7 +19,7 @@ import { MatCardModule } from "@angular/material/card";
 import { NotFoundComponent } from "./components/not-found/not-found.component";
 import { NgxPaginationModule } from "ngx-pagination";
 import { MatDialogModule } from "@angular/material/dialog";
-import { PersonDetailsComponent } from './components/person-details/person-details.component';
+import { PersonDetailsComponent } from "./components/person-details/person-details.component";
 
 @NgModule({
   declarations: [
@@ -45,7 +45,6 @@ import { PersonDetailsComponent } from './components/person-details/person-detai
     MatDialogModule
   ],
   providers: [DataService],
-  bootstrap: [AppComponent],
-  entryComponents: [DetailsComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
