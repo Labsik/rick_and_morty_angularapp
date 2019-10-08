@@ -40,7 +40,10 @@
           Name
         </th>
         <td mat-cell *matCellDef="let person">
-          <a routerLink="/details" routerLinkActive="router-link-active">
+          <a
+            routerLink="person/{{ person.id }}"
+            routerLinkActive="router-link-active"
+          >
             {{ person.name }}
           </a>
         </td>

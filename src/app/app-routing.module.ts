@@ -4,11 +4,11 @@ import { StartComponent } from "./components/start/start.component";
 import { PersonsComponent } from "./components/persons/persons.component";
 import { DetailsComponent } from "./components/details/details.component";
 import { NotFoundComponent } from "./components/not-found/not-found.component";
-import { PersonDetailsComponent } from './components/person-details/person-details.component';
+import { PersonDetailsComponent } from "./components/person-details/person-details.component";
 
 const routes: Routes = [
   { path: "", component: StartComponent },
-  { path: "persons", component: PersonsComponent },
+  // { path: "persons", component: PersonsComponent },
   { path: "details", component: DetailsComponent },
   { path: "person/:id", component: PersonDetailsComponent },
   { path: "**", component: NotFoundComponent }
