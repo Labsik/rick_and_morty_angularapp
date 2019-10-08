@@ -9,7 +9,9 @@ export class DataService {
   personsUrl: string = "https://rickandmortyapi.com/api/character/?page=";
   personUrl: string = "https://rickandmortyapi.com/api/character/";
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    
+  }
 
   getPersons(pageNumber: number): Observable<PersonsResponse> {
     return this.getResponse(this.personsUrl + `${pageNumber + 1}`);
