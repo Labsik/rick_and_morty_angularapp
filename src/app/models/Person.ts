@@ -4,11 +4,11 @@ export interface ResponseInterface {
   results: any;
 }
 
-export interface PersonResponse extends ResponseInterface {
-  results: Person[];
+export interface PersonsResponse extends ResponseInterface {
+  results: Persons[];
 }
 
-export interface Person {
+export interface Persons {
   id: number;
   name: string;
   status: string;
@@ -20,5 +20,21 @@ export interface Person {
   };
   location: {
     name: string;
+  };
+}
+
+
+export interface Person{
+  id?: number;
+  name?: string;
+  status?: string;
+  species?: string;
+  gender?: string;
+  image?: string;
+  origin?: {
+    name?: string;
+  };
+  location: {
+    name?: string;
   };
 }

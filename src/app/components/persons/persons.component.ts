@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from "@angular/core";
 import { DataService } from "src/app/services/data.service";
-import { Person } from "src/app/models/Person";
+import { Persons } from "src/app/models/Person";
 
 import { MatSort } from "@angular/material/sort";
 
