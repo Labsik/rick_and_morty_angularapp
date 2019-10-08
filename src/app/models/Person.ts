@@ -1,4 +1,3 @@
-
 export interface ResponseInterface {
   info: any;
   results: any;
@@ -23,8 +22,7 @@ export interface Persons {
   };
 }
 
-
-export interface Person{
+export interface Person {
   id?: number;
   name?: string;
   status?: string;

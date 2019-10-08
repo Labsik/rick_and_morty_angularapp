@@ -13,8 +13,8 @@ import { switchMap } from "rxjs/operators";
 })
 export class PersonDetailsComponent implements OnInit {
   id: number;
-  // persons$: Observable<Person[]>;
-  persons;
+
+  person: Person[];
 
   constructor(
     private dataService: DataService,
@@ -23,21 +23,12 @@ export class PersonDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    // this.persons$ = this.route.paramMap.pipe(
-    //   switchMap((params: Params) => {
-    //     return this.dataService.getPerson(params["id"]);
-    //   })
-    // );
-    const id = +this.route.snapshot.paramMap.get("id");
-    this.dataService.getPerson(id).subscribe(person => (this.persons = person));
-    console.log(typeof this.persons);
+    this.getPerson();
   }
 
-  // getPerson() {
-  //   const id = +this.route.snapshot.paramMap.get("id");
-  //   this.dataService
-  //     .getPerson(id)
-  //     .subscribe(person => (this.persons = person));
-  //   console.log(this.persons);
-  // }
+  getPerson() {
+    const id = +this.route.snapshot.paramMap.get("id");
+    this.dataService.getPerson(id).subscribe(person => (this.person = person));
+    console.log(typeof this.person);
+  }
 }
