@@ -16,30 +16,6 @@ import { Sort } from "@angular/material/sort";
 import { DetailsComponent } from '../details/details.component';
 import { MatDialog, MatDialogConfig } from '@angular/material'
 
-// export interface ResponseInterface {
-//   info: any;
-//   results: any;
-// }
-
-// export interface PersonResponse extends ResponseInterface {
-//   results: Person[];
-// }
-
-// export interface Person {
-//   id?: number;
-//   name?: string;
-//   status?: string;
-//   species?: string;
-//   gender?: string;
-//   image?: string;
-//   origin?: {
-//     name?: string;
-//   };
-//   location?: {
-//     name?: string;
-//   };
-// }
-
 @Component({
   selector: "app-persons",
   templateUrl: "./persons.component.html",
@@ -48,8 +24,6 @@ import { MatDialog, MatDialogConfig } from '@angular/material'
 export class PersonsComponent implements AfterViewInit {
   displayedColumns: string[] = ["id", "name"];
   dataService: DataService;
-  // data: Person[] = [];
-
   data;
 
   resultsLength = 0;

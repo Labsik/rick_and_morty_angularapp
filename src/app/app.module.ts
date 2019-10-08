@@ -19,6 +19,7 @@ import { MatCardModule } from "@angular/material/card";
 import { NotFoundComponent } from "./components/not-found/not-found.component";
 import { NgxPaginationModule } from "ngx-pagination";
 import { MatDialogModule } from "@angular/material/dialog";
+import { PersonDetailsComponent } from './components/person-details/person-details.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MatDialogModule } from "@angular/material/dialog";
     DetailsComponent,
     PersonsComponent,
     StartComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PersonDetailsComponent
   ],
   imports: [
     BrowserModule,

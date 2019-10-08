@@ -7,7 +7,7 @@ import { PersonResponse, ResponseInterface, Person } from "../models/Person";
 @Injectable()
 export class DataService {
   personsUrl: string = "https://rickandmortyapi.com/api/character/?page=";
-
+ personUrl: string = "https://rickandmortyapi.com/api/character"
   constructor(private http: HttpClient) {}
 
   // getPersons(): Observable<Person[]> {
@@ -20,5 +20,9 @@ export class DataService {
 
   getResponse(url: string): Observable<ResponseInterface> {
     return this.http.get<ResponseInterface>(url);
+  }
+
+  getPerson(id: string): Observable<PersonResponse>{
+    return this.getResponse(`this.personUrl/${id}`);
   }
 }
