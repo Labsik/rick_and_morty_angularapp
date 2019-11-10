@@ -17,6 +17,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatCardModule } from "@angular/material/card";
 import { NotFoundComponent } from "./components/not-found/not-found.component";
+
 import { NgxPaginationModule } from "ngx-pagination";
 import { MatDialogModule } from "@angular/material/dialog";
 import { PersonDetailsComponent } from "./components/person-details/person-details.component";
